@@ -1,23 +1,26 @@
+import hello._
+import chisel3._
 import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 
 class HelloTest extends AnyFlatSpec with ChiselScalatestTester {
-  behavior of "Hello"
-  it should "pass" in {
-    test(new Hello) { c =>
-      c.clock.setTimeout(0)
-      var ledStatus = BigInt(-1)
-      println("Start the blinking LED")
-      for (_ <- 0 until 100) {
-        c.clock.step(10000)
-        val ledNow = c.io.led.peek().litValue
-        val s = if (ledNow == 0) "o" else "*"
-        if (ledStatus != ledNow) {
-          System.out.println(s)
-          ledStatus = ledNow
-        }
+  "Hello" should "pass" in {
+    test(new Hello) { hello =>
+      var andRes = Array(0, 0, 0, 1);
+      var orRes = Array(0, 1, 1, 1);
+      var xorRes = Array(0, 1, 1, 0);
+      for (i <- 0 to 3) {
+        hello.io.andSw.poke(i.U)
+        hello.clock.step()
+        hello.io.andLed.expect(andRes(i))
+        hello.io.orSw.poke(i.U)
+        hello.clock.step()
+        hello.io.orLed.expect(orRes(i))
+        hello.io.xorSw.poke(i.U)
+        hello.clock.step()
+        hello.io.xorLed.expect(xorRes(i))
+
       }
-      println("\nEnd the blinking LED")
     }
   }
 }
