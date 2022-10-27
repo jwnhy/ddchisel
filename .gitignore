@@ -1,3 +1,15 @@
 *.class
 *.log
 tags
+*/target
+*/db
+*/incremental_db
+*/project
+*/output_files
+*.fir
+*.qsf
+*.json
+*.bak
+*.rpt
+*.xml
+*/.metals
