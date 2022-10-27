@@ -7,7 +7,6 @@ tags
 */project
 */output_files
 *.fir
-*.qsf
 *.json
 *.bak
 *.rpt
