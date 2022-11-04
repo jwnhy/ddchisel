@@ -1,0 +1,37 @@
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# File: /home/john/documents/ddchisel/decoder/decoder.csv
+# Generated on: Fri Oct 28 18:31:40 2022
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clock,Input,,,,PIN_R9,,,,,,
+io_beginSw,Input,PIN_A12,7,B7_N0,PIN_A17,,,,,,
+io_inSw[3],Input,PIN_C12,7,B7_N0,PIN_C12,2.5 V,,,,,
+io_inSw[2],Input,PIN_D12,7,B7_N0,PIN_D12,2.5 V,,,,,
+io_inSw[1],Input,PIN_C11,7,B7_N0,PIN_C11,2.5 V,,,,,
+io_inSw[0],Input,PIN_C10,7,B7_N0,PIN_C10,2.5 V,,,,,
+io_outSeg[7],Output,PIN_D15,7,B7_N0,PIN_D15,2.5 V,,,,,
+io_outSeg[6],Output,PIN_C17,7,B7_N0,PIN_C17,2.5 V,,,,,
+io_outSeg[5],Output,PIN_D17,7,B7_N0,PIN_D17,2.5 V,,,,,
+io_outSeg[4],Output,PIN_E16,7,B7_N0,PIN_E16,2.5 V,,,,,
+io_outSeg[3],Output,PIN_C16,7,B7_N0,PIN_C16,2.5 V,,,,,
+io_outSeg[2],Output,PIN_C15,7,B7_N0,PIN_C15,2.5 V,,,,,
+io_outSeg[1],Output,PIN_E15,7,B7_N0,PIN_E15,2.5 V,,,,,
+io_outSeg[0],Output,PIN_C14,7,B7_N0,PIN_C14,2.5 V,,,,,
+reset,Input,,,,PIN_AB11,,,,,,
