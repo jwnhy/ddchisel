@@ -19,7 +19,6 @@ class HelloTest extends AnyFlatSpec with ChiselScalatestTester {
         hello.io.xorSw.poke(i.U)
         hello.clock.step()
         hello.io.xorLed.expect(xorRes(i))
-
       }
     }
   }
